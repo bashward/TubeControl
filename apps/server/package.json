@@ -1,0 +1,17 @@
+{
+  "name": "@tubecontrol/server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1",
+    "cors": "^2.8.5",
+    "@tubecontrol/common": "workspace:*"
+  },
+  "license": "MIT"
+}

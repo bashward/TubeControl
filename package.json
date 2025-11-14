@@ -1,0 +1,18 @@
+{
+  "name": "tubecontrol",
+  "version": "1.0.0",
+  "private": true,
+  "description": "YouTube Remote Control System - Control YouTube on your PC from your phone",
+  "scripts": {
+    "dev:server": "pnpm --filter @tubecontrol/server dev",
+    "dev:web": "pnpm --filter @tubecontrol/web dev",
+    "build:server": "pnpm --filter @tubecontrol/server build",
+    "build:web": "pnpm --filter @tubecontrol/web build",
+    "build:extension": "pnpm --filter @tubecontrol/extension build",
+    "build:all": "pnpm -r build",
+    "start:server": "pnpm --filter @tubecontrol/server start"
+  },
+  "keywords": ["youtube", "remote", "control", "websocket"],
+  "author": "bashward",
+  "license": "MIT"
+}

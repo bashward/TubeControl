@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TubeControl</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 320px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #ff0000, #cc0000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .header p {
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .status {
+      background: #1f1f1f;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #666;
+    }
+
+    .status-dot.connected {
+      background: #00ff00;
+      box-shadow: 0 0 8px #00ff00;
+    }
+
+    .room-code {
+      text-align: center;
+      margin: 16px 0;
+    }
+
+    .room-code-label {
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 8px;
+    }
+
+    .room-code-value {
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      font-family: 'Courier New', monospace;
+      color: #ff0000;
+    }
+
+    .instructions {
+      background: #1f1f1f;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .instructions h3 {
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .instructions ol {
+      padding-left: 20px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #aaa;
+    }
+
+    .instructions li {
+      margin-bottom: 8px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    button {
+      flex: 1;
+      padding: 10px;
+      background: #272727;
+      color: #fff;
+      border: 1px solid #3f3f3f;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all 0.2s;
+    }
+
+    button:hover {
+      background: #3f3f3f;
+    }
+
+    button.primary {
+      background: #ff0000;
+      border-color: #ff0000;
+    }
+
+    button.primary:hover {
+      background: #cc0000;
+    }
+
+    button.danger {
+      background: #b30000;
+      border-color: #b30000;
+    }
+
+    button.danger:hover {
+      background: #990000;
+    }
+
+    .peers {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🎮 TubeControl</h1>
+    <p>Control YouTube from your phone</p>
+  </div>
+
+  <div class="status">
+    <div class="status-indicator">
+      <div class="status-dot" id="statusDot"></div>
+      <span id="statusText">Connecting...</span>
+    </div>
+    <div class="peers" id="peersText"></div>
+  </div>
+
+  <div class="room-code">
+    <div class="room-code-label">Your Room Code</div>
+    <div class="room-code-value" id="roomCode">------</div>
+  </div>
+
+  <div class="instructions">
+    <h3>How to Connect:</h3>
+    <ol>
+      <li>Open <strong>tubecontrol.app</strong> on your phone</li>
+      <li>Enter the room code shown above</li>
+      <li>Start controlling YouTube!</li>
+    </ol>
+  </div>
+
+  <div class="actions">
+    <button id="newCodeBtn">New Code</button>
+    <button id="disconnectBtn" class="danger">Disconnect</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
