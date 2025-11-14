@@ -2,7 +2,7 @@ import express from 'express';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors';
-import { CONNECTION, COMMANDS, EVENTS } from '@tubecontrol/common';
+import { CONNECTION, COMMANDS, EVENTS } from './event-types.js';
 
 const app = express();
 const httpServer = createServer(app);
@@ -102,7 +102,6 @@ io.on('connection', (socket) => {
   // Handle explicit leave room request
   socket.on(CONNECTION.LEAVE_ROOM, () => {
     const roomCode = getRoomCode(socket);
-    console.log(`===== RECEIVED LEAVE_ROOM from ${socket.id} =====`);
     if (roomCode) {
       const currentSize = io.sockets.adapter.rooms.get(roomCode)?.size || 1;
       const newSize = currentSize - 1;
