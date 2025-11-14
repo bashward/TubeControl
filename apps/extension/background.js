@@ -11,9 +11,9 @@ let peersInRoom = 1;
 let youtubeTabId = null;
 
 // Server URL - change this to your deployed server
-const SERVER_URL = 'http://localhost:3001';
+const SERVER_URL = 'https://tubecontrol.onrender.com';
 
-console.log('[TubeControl] Server URL:', SERVER_URL);
+
 
 // Generate a 6-digit room code
 function generateRoomCode() {

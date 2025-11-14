@@ -90,17 +90,29 @@
 
 .input {
   width: 100%;
-  padding: 20px;
+  padding: 16px;
   background: #1a1a1a;
   border: 2px solid #2a2a2a;
   border-radius: 12px;
   color: #fff;
-  font-size: 32px;
+  font-size: 28px;
   text-align: center;
-  letter-spacing: 8px;
+  letter-spacing: 4px;
   font-family: 'Courier New', monospace;
   outline: none;
   transition: border-color 0.2s;
+}
+
+@media (min-width: 400px) {
+  .input {
+    padding: 20px;
+    font-size: 32px;
+    letter-spacing: 8px;
+  }
+
+  .input::placeholder {
+    letter-spacing: 8px;
+  }
 }
 
 .input:focus {
@@ -109,7 +121,7 @@
 
 .input::placeholder {
   color: #444;
-  letter-spacing: 8px;
+  letter-spacing: 4px;
 }
 
 .error {
