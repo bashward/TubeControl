@@ -12,9 +12,6 @@ importers:
 
   apps/server:
     dependencies:
-      '@tubecontrol/common':
-        specifier: workspace:*
-        version: link:../../packages/common
       cors:
         specifier: ^2.8.5
         version: 2.8.5
