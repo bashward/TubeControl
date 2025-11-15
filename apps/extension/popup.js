@@ -29,7 +29,7 @@ function updateUI() {
   // Peers
   const isRemoteConnected = currentStatus.peers > 1;
   if (isRemoteConnected) {
-    peersText.textContent = `✓ Remote connected (${currentStatus.peers} devices)`;
+    peersText.textContent = `Remote connected (${currentStatus.peers} devices)`;
     peersText.style.color = '#00ff00';
   } else {
     peersText.textContent = 'Waiting for remote...';
