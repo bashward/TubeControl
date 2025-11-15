@@ -12,20 +12,20 @@ TubeControl is a three-part system that turns your mobile phone into a powerful 
 
 ## Features
 
-### 🎵 Player Control
+### Player Control
 - ▶️ Play/Pause
 - 🔊 Volume control with mute
 - ⏩ Seek/scrub through videos
 - ⏭️ Next/Previous (for playlists)
 - ⛶ Fullscreen toggle
 
-### 🔍 Search & Discovery
+### Search & Discovery
 - Search for videos from your phone
 - Browse search results with thumbnails
 - Play any video on your PC with one tap
 - See what's currently playing
 
-### 🔗 Easy Pairing
+### Easy Pairing
 - Simple 6-digit room code
 - Instant pairing
 - Auto-reconnect on connection loss
@@ -168,54 +168,6 @@ PORT=3001
 NEXT_PUBLIC_SERVER_URL=http://localhost:3001
 ```
 
-**Browser Extension** (`apps/extension/background.js`):
-- Update `SERVER_URL` constant for production deployment
-
-## Deployment
-
-### Deploy the Backend Server
-
-Deploy to any Node.js hosting platform:
-
-```bash
-cd apps/server
-pnpm install --prod
-pnpm start
-```
-
-Recommended platforms:
-- Railway
-- Render
-- Fly.io
-- Heroku
-- DigitalOcean App Platform
-
-### Deploy the Web App
-
-Deploy to Vercel, Netlify, or any Next.js-compatible platform:
-
-```bash
-cd apps/web
-pnpm build
-pnpm start
-```
-
-**Important**: Update `NEXT_PUBLIC_SERVER_URL` to point to your deployed backend server.
-
-### Publish the Browser Extension
-
-1. **Build for production**
-   ```bash
-   cd apps/extension
-   pnpm build
-   ```
-
-2. **Update SERVER_URL** in `background.js` to your production server
-
-3. **Package the extension**
-   - Zip the `dist` directory
-   - Submit to Chrome Web Store and/or Firefox Add-ons
-
 ## Technology Stack
 
 - **Web App**: Next.js 14, React, TypeScript, Socket.io-client
@@ -306,4 +258,4 @@ Built following the Product Requirements Document for a YouTube Remote Control S
 
 ---
 
-**Enjoy controlling YouTube from anywhere in your home!** 🎉
+**Enjoy controlling YouTube from anywhere in your home!**
